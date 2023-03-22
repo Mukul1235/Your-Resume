@@ -6,7 +6,7 @@ const Router = require('./routes/userRouter');
 const path=require("path");
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   app.use(express.static(path.resolve(__dirname, "Client", "build")));
   res.sendFile(path.resolve(__dirname, "Client", "build", "index.html"));
 });
