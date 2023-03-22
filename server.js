@@ -7,8 +7,8 @@ const path=require("path");
 app.use(express.json());
 
 app.get("*", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "Client", "build")));
-  res.sendFile(path.resolve(__dirname, "Client", "build", "index.html"));
+  app.use(express.static(path.resolve(__dirname, "client", "build")));
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 const port = process.env.PORT || 6002;
 app.use('/api/user/', Router);
